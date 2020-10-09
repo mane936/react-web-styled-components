@@ -8,10 +8,14 @@ export const InfoSec = styled.div`
 
 export const InfoRow = styled.div`
   display: flex;
-  margin: 0 -15px -15px -15px;
+  margin: 0 -15px -15px 0px;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
+
+  @media screen and (min-width: 2000px) {
+    margin-left: 250px;
+  }
 `;
 
 export const InfoColumn = styled.div`

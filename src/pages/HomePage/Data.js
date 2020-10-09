@@ -1,7 +1,6 @@
 export const homeObjOne = {
   lightBg: false,
   primary: true,
-  lightBg: false,
   imgStart: false,
   lightTopLine: true,
   lightTextDesc: true,
@@ -13,7 +12,7 @@ export const homeObjOne = {
   topLine: "Marketing Agency",
   img: require("../../images/svg-1.svg"),
   alt: "Image",
-  start: true,
+  start: false,
 };
 
 export const homeObjTwo = {

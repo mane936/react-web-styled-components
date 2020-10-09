@@ -35,9 +35,11 @@ export const PricingCardsContainer = styled.div`
 `;
 
 export const PricingCard = styled.div`
-  padding: 35px;
-  background-color: black;
+  padding: 25px 0px 35px;
+  min-width: 270px;
+  background-color: #242424;
   border-radius: 5px;
+  text-align: center;
 
   &:nth-child(2) {
     margin: 24px;
@@ -47,6 +49,15 @@ export const PricingCard = styled.div`
   &:hover {
     transform: scale(1.06);
     background-color: #101522;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    &:hover {
+      transition: none;
+      transform: none;
+      background-color: #242424;
+    }
   }
 `;
 
@@ -81,4 +92,8 @@ export const CardServicesList = styled.ul`
 export const CardServicesItem = styled.li`
   font-size: 16;
   margin-bottom: 5px;
+`;
+
+export const IconWrapper = styled.div`
+  margin: 10px auto 16px;
 `;
