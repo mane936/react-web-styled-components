@@ -13,33 +13,13 @@ import {
   NavLinks,
   NavItemBtn,
   NavBtnLink,
+  NavButton,
 } from "./Navbar.elements";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
-
-  //***************** */
-  //We should inherit the global Button into Navbar.elements.js
-  //and override @media styles on it
-  //this is just another way.
-  const showButton = () => {
-    if (window.innerHeightWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
-  //***************** */
 
   return (
     <>
@@ -64,17 +44,9 @@ const Navbar = () => {
                 <NavLinks to="/">Products</NavLinks>
               </NavItem>
               <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to="/sign-up">
-                    <Button primary>SIGN UP</Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to="/sign-up">
-                    <Button fontBig primary>
-                      SIGN UP
-                    </Button>
-                  </NavBtnLink>
-                )}
+                <NavBtnLink to="/sign-up">
+                  <NavButton>SIGN UP</NavButton>
+                </NavBtnLink>
               </NavItemBtn>
             </NavMenu>
           </NavbarContainer>

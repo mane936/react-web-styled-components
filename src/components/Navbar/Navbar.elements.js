@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 import { FaMagento } from "react-icons/fa";
-import { Button as styledButton } from "../../globalStyles";
+import { Button } from "../../globalStyles";
 
 export const Nav = styled.nav`
   background: #101522;
@@ -138,4 +138,17 @@ export const NavBtnLink = styled(Link)`
   width: 100%;
   border: none;
   outline: none;
+`;
+
+export const NavButton = styled(Button)`
+  background: "#4B59F7";
+  font-size: 16px;
+
+  &:hover {
+    background: "#0467FB";
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 20px;
+  }
 `;
